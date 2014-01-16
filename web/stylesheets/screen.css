@@ -364,14 +364,14 @@ footer span.octocat {
 /* content */
 
 body {
-  background: #060040;
-  color: #dddddd;
+  background: #ffffff;
+  color: #000000;
   font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
   -webkit-font-smoothing: antialiased;
 }
 
 a, a:hover {
-  color: #b0b5ee;
+  color: #2222ff;
 }
 
 a {
