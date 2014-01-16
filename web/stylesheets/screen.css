@@ -240,7 +240,7 @@ section#downloads a em {
   display: block;
 }
 
-section#downloads a.zip {
+section#downloads a.code {
   float: left;
   background-position: 0 0;
 }
@@ -250,7 +250,7 @@ section#downloads a.tgz {
   background-position: -275px 0;
 }
 
-section#downloads a.zip:hover {
+section#downloads a.code:hover {
   background-position: 0 -197px;
 }
 
