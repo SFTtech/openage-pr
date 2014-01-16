@@ -204,7 +204,7 @@ div#no-downloads {
   padding-bottom: 150px;
   margin: -80px auto -150px;
   z-index: 1;
-  background: transparent url(../images/bg-ramp.jpg) center 171px no-repeat;
+  background: transparent url(../images/bg-ramp.png) center 171px no-repeat;
 }
 
 div#no-downloads span.inner {
@@ -276,7 +276,7 @@ section#main_content {
 /* footer */
 
 footer {
-  background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat;
+  background: transparent url(../images/footer-ramp.png) center -1px no-repeat;
   padding-top: 104px;
   margin: -94px auto 40px;
   max-width: 560px;
@@ -364,14 +364,14 @@ footer span.octocat {
 /* content */
 
 body {
-  background: #ece4d8;
+  background: #060040;
+  color: #dddddd;
   font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
-  color: #544943;
   -webkit-font-smoothing: antialiased;
 }
 
 a, a:hover {
-  color: #417090;
+  color: #b0b5ee;
 }
 
 a {
@@ -474,7 +474,7 @@ tr {
 th {
   display: table-cell;
   padding: 2px 10px;
-  border: solid #ece4d8;
+  border: solid #ffcc51;
   border-width: 0 2px 2px 0;
   color: #cd596b;
   font-family: 'Open Sans', Myriad, Calibri, sans-serif;
@@ -485,7 +485,7 @@ th {
 td {
   display: table-cell;
   padding: 0 .7em;
-  border: solid #ece4d8;
+  border: solid #ffcc51;
   border-width: 0 2px 2px 0;
 }
 
