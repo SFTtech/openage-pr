@@ -89,6 +89,9 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 }
+b {
+  font-weight: bold;
+}
 ol, ul {
   list-style: none;
 }
@@ -114,7 +117,7 @@ header, footer, section {
 
 div.shell {
   display: block;
-  width: 670px;
+  width: 675px;
   margin: 0 auto;
 }
 
@@ -263,8 +266,40 @@ span.banner-fix {
   display: block;
   height: 19px;
   position: absolute;
-  width: 670px;
+  width: 675px;
   top: 19px;
+}
+
+span.link-container {
+  background-color: #7c334f;
+  display: block;
+  padding: 3px;
+  margin: 0 -20px;
+}
+span.link-distribute {
+  border: 2px solid #cd596b;
+  padding: 2px 2px 4px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #7c334f;
+}
+
+span.link-distribute a {
+  color: #7eb0d2;
+  padding: 2px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+span.link-distribute a:not(:last-child):after {
+  content: ' ';
+  width: 0;
+  height: 24px;
+  display: inline-block;
+  margin-left: 24px;
+  vertical-align: middle;
+  border-right: 2px solid #cd596b;
 }
 
 section#main_content {
@@ -309,6 +344,10 @@ footer a {
   color: #cd596b;
 }
 
+footer a.source-link {
+  font-size: xx-small;
+}
+
 footer span.ribbon-inner p {
   background-color: #7c334f;
   margin: 0;
@@ -322,7 +361,6 @@ footer span.ribbon-inner a {
   bottom: -1px;
   color: #7eb0d2;
   font-family: 'Open Sans', Myriad, Calibri, sans-serif;
-  text-transform: uppercase;
   font-style: normal;
   font-weight: 800;
   font-size: 1.2em;
@@ -358,7 +396,7 @@ footer span.octocat {
   display: block;
   width: 30px;
   height: 30px;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 /* content */
@@ -371,7 +409,7 @@ body {
 }
 
 a, a:hover {
-  color: #2222ff;
+  color: #408bc0;
 }
 
 a {
@@ -391,6 +429,11 @@ p {
   margin: .7em 0;
 }
 
+p.contact-intro {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
 strong {
   font-weight: bold;
 }
@@ -406,7 +449,7 @@ ol {
 }
 
 ul {
-  margin: .7em 0;
+  margin: .4em 0;
   padding-left: 1.35em;
 }
 
@@ -424,10 +467,7 @@ blockquote {
 }
 
 img {
-  -webkit-box-shadow: 0px 2px 0px #bdb6ad;
-  -moz-box-shadow: 0px 2px 0px #bdb6ad;
-  box-shadow: 0px 2px 0px #bdb6ad;
-  border: 2px solid #fff6e9;
+  border: 2px solid #00000000;
   max-width: 502px;
 }
 
