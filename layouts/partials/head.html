@@ -1,0 +1,48 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ $title_plain := .Title | markdownify | plainify }}
+  <title>{{ $title_plain }}</title>
+  <meta name="author" content="{{ .Param "author" }}" />
+  {{ $keywords := .Site.Params.defaultKeywords | default (slice "" | first 0) }}
+  {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if gt (len $keywords) 0 }}
+  <meta name="keywords" content="{{ delimit (uniq $keywords) ", " }}">
+  {{ end }}
+  {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
+  <meta name="description" content="{{ $description_plain }}">
+
+  {{ .Hugo.Generator }}
+
+  <!-- Bootstrap and Font Awesome CSS -->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/all.css" />
+  <link rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" href="{{ .Site.BaseURL }}css/bootstrap.min.css" crossorigin="anonymous" />
+
+  <!-- CSS animations  -->
+  <link href="{{ .Site.BaseURL }}css/animate.css" rel="stylesheet">
+
+  <!-- Theme stylesheet, if possible do not edit this stylesheet -->
+  {{ with .Site.Params.style }}
+    <link href="{{ "css/style" | relURL}}.{{ . }}.css" rel="stylesheet" id="theme-stylesheet" />
+  {{ else }}
+    <link href="{{ .Site.BaseURL }}css/style.default.css" rel="stylesheet" id="theme-stylesheet" />
+  {{ end }}
+
+  <!-- Custom stylesheet - for your changes -->
+  <link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet">
+
+  <!-- Favicon and Apple touch icons-->
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}img/apple-touch-icon.png" />
+
+  <!-- owl carousel CSS -->
+  <link href="{{ .Site.BaseURL }}css/owl.carousel.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}css/owl.theme.css" rel="stylesheet">
+
+  <!-- RSS feed -->
+  <link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+
+</head>
