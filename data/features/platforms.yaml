@@ -1,0 +1,5 @@
+weight: 0
+name: "Platform independent "
+icon:  ""
+url: ""
+description: "TODO: Works natively on GNU/Linux, BSD, macOS and Windows. We have ready-to-use packages in [Download](/download/) TODO"

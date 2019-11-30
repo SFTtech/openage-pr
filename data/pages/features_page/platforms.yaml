@@ -1,0 +1,5 @@
+weight: 0
+name: "Platform independent "
+icon:  "fas fa-desktop"
+url: ""
+description: "TODO: Natively working on GNU/Linux, BSD, macOS and Windows"

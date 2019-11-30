@@ -1,0 +1,3 @@
+[submodule "themes\\hugo-universal"]
+	path = themes\\hugo-universal
+	url = https://github.com/simonsan/hugo-universal-theme

@@ -1,0 +1,8 @@
+weight: 3
+platform: all
+tag: signature
+name: "GPG Signatures"
+description: "Used to verify the integrity of your downloads. If you don't know what GPG is you can ignore it."
+icon: "img/banners/signature.png"
+url: "https://gist.githubusercontent.com/simonsan/817cdc5ef5cd5f53875bc52bf4cd7a2f/raw/"
+url_name: "Show Public Key"

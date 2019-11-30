@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<body>
+
+<div id="all">
+
+    {{ partial "top.html" . }}
+
+    {{ partial "nav.html" . }}
+
+    {{ partial "landingpage-extra/intro_pic.html" . }}
+
+    {{ partial "landingpage-extra/about_abs.html" . }}
+
+    {{ partial "features.html" . }}
+
+    {{ partial "landingpage-extra/converter_abs.html" . }}
+
+    {{ partial "carousel.html" . }}
+
+    {{ partial "landingpage-extra/download_abs.html" . }}
+
+    {{ partial "landingpage-extra/team_abs.html" . }}
+
+    {{ if and (isset .Site.Params "testimonials") .Site.Params.testimonials.enable }}
+    {{ partial "testimonials.html" . }}
+    {{ else if (isset .Site.Params "awards") .Site.Params.awards.enable }}
+    {{ partial "awards.html" . }}
+    {{ end }}
+
+    {{ partial "see_more.html" . }}
+
+    {{ partial "recent_posts.html" . }}
+
+    {{ partial "supporters.html" . }}
+
+    {{ partial "landingpage-extra/footer_openage.html" . }}
+
+    {{ partial "footer.html" . }}
+
+</div>
+<!-- /#all -->
+
+{{ partial "scripts.html" . }}
+
+</body>
+
+</html>

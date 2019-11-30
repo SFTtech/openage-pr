@@ -1,0 +1,47 @@
+{{ $arg := .Get 0 }}
+{{ if gt (len .Site.Data.pages.features_page) 0 }}
+{{ $features_per_row := (default 3 .Site.Params.pages.features_page.per_row) }}
+<div id="content">
+    <section class="">
+        <div class="container">
+            {{ range $index, $element := sort .Site.Data.pages.features_page "weight" }}
+            {{ if eq (mod $index 3) 0 }}
+            <div class="col-md-12">
+                <div class="row">
+                    {{ end }}
+                    <div class="col-md-4 single-feature-box">
+                        <div class="box-simple background-gray">
+                            {{ with $element.url }}
+                            <a href="{{ $element.url }}">
+                                {{ end }}
+
+                                <div class="img feature-banner">
+                                    {{ with $element.banner }}
+                                    <img alt="feature-banner" class="feature-banner-image" src="{{ $element.banner }}">
+                                    {{ end }}
+                                </div>
+                                {{ with $element.url }}
+                            </a>
+                            {{ end }}
+                            <h3>{{ $element.name | markdownify }}</h3>
+                            <p>{{ $element.description | markdownify }}</p>
+
+                            <p class="text-center">
+                                {{ with $element.url }}
+                                <a class="btn btn-template-transparent-black btn-lg" href="{{ $element.url }}">
+                                    {{ end }}
+                                    Learn more
+                                </a>
+
+                            </p>
+                        </div>
+                    </div>
+                    {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.pages.features_page) 1 )) }}
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

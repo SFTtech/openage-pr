@@ -1,0 +1,18 @@
+weight: 2
+platform: win
+tag: nightly
+name: "Windows Nightly builds"
+description: "Test out the latest builds that are created every day."
+icon: "img/dl-platforms/win.png"
+url: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-amd64-installer_NIGHTLY-latest.exe"
+url_name: "amd64"
+url3: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-x86-installer_NIGHTLY-latest.exe"
+url3_name: "x86"
+url2: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-amd64-portable_NIGHTLY-latest.7z"
+url2_name: "amd64"
+url4: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-x86-portable_NIGHTLY-latest.7z"
+url4_name: "x86"
+sig_url: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-amd64-installer_NIGHTLY-latest.exe.asc"
+sig_url3: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-x86-installer_NIGHTLY-latest.exe.asc"
+sig_url2: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-amd64-portable_NIGHTLY-latest.7z.asc"
+sig_url4: "https://bintray.com/simonsan/openage-packages/download_file?file_path=openage-x86-portable_NIGHTLY-latest.7z.asc"

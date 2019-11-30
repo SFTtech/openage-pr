@@ -1,0 +1,5 @@
+weight: 5
+name: "APIs"
+icon: "fas fa-door-open"
+url: ""
+description: "TODO: nyan, c++-python-interface, AI Scripting in Python and in a declarative language, Modding API and own [mod-database](https://openage.mod.io)"

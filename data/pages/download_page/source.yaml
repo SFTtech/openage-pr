@@ -1,0 +1,10 @@
+weight: 1
+platform: all
+tag: source
+name: "Source Code"
+description: "openage is free and open source. You are free to study, modify and distribute it under GNU GPLv3 license."
+icon: "img/banners/source-code.png"
+url: "https://github.com/SFTtech/openage/tarball/master"
+url_name: "Tarball"
+url2: "https://github.com/SFTtech/openage/archive/master.zip"
+url2_name: "zip-File"

@@ -1,0 +1,5 @@
+weight: 1
+name: "Modern technologies"
+icon: "fas fa-plane-departure"
+url: ""
+description: "TODO: C++17, Qt5, Python3, Vulkan, Opus, [nyan](https://github.com/SFTtech/nyan)"

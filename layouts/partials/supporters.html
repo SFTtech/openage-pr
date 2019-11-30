@@ -1,0 +1,36 @@
+{{ if isset .Site.Params "supporters" }}
+{{ if .Site.Params.supporters.enable }}
+{{ if gt (len .Site.Data.supporters) 0 }}
+<section class="bar background-gray no-mb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading text-center">
+                    <h2>{{ .Site.Params.supporters.title | markdownify }}</h2>
+                </div>
+
+                <p class="lead">
+                    {{ .Site.Params.supporters.subtitle | markdownify }}
+                </p>
+
+                <ul class="owl-carousel customers">
+                    {{ range .Site.Data.supporters }}
+                    <li class="item" title="{{ .name }}">
+                        {{ if .url }}
+                        <a href="{{ .url }}" target="_blank">
+                            <img alt="{{ .name }}" class="img-responsive" src="{{ .image }}"/>
+                        </a>
+                        {{ else }}
+                        <img alt="{{ .name }}" class="img-responsive" src="{{ .image }}"/>
+                        {{ end }}
+                    </li>
+                    {{ end }}
+                </ul>
+                <!-- /.owl-carousel -->
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,203 @@
+baseurl = "https://simonsan.github.io/openage-pr/"
+title = "openage rts-game engine"
+theme = "hugo-universal"
+themesDir = "themes"
+languageCode = "en-UK"
+
+publishdir = "../openage-pr-gh-pages"
+
+enableRobotsTXT = true
+
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+
+# Define the number of posts per page
+paginate = 5
+
+[menu]
+
+# Main menu
+#[[menu.main]]
+#    identifier="home"
+#    name = "Home"
+#    url  = "/"
+#    weight = 1
+
+[[menu.main]]
+    identifier="features"
+    name = "Features"
+    url  = "/features/"
+    weight = 1
+
+[[menu.main]]
+    identifier = "download"
+    name = "Download"
+    url  = "/download/"
+    weight = 2
+
+#[[menu.main]]
+#    identifier="about"
+#    name = "About"
+#    url  = "/about/"
+#    weight = 3
+
+# [[menu.main]]
+#    identifier="blog"
+#    name = "Blog"
+#    url  = "/blog/"
+#    weight = 2
+
+# [[menu.main]]
+#    identifier = "status"
+#    name = "Status"
+#    url  = "/status/"
+#    weight = 4
+
+[[menu.main]]
+    identifier = "faq"
+    name = "FAQ"
+    url  = "/faq/"
+    weight = 4
+    
+[[menu.main]]
+    identifier="learn"
+    name = "Learn"
+    url  = "https://doc.openage.sft.mx/"
+    weight = 5
+    
+[[menu.main]]
+    identifier="get_involved"
+    name = "Get involved"
+    url  = "/get_involved/"
+    weight = 6
+
+# [[menu.main]]
+#    identifier = "contact"
+#    name = "Contact"
+#    url  = "/contact/"
+#    weight = 8
+
+[[menu.main]]
+    identifier = "donate"
+    name = "Donate"
+    url  = "https://liberapay.com/SFTtech"
+    weight = 9
+
+
+# Top bar social links menu
+
+[[menu.topbar]]
+    weight = 1
+    name = "GitHub"
+    url = "https://github.com/SFTtech/openage"
+    pre = "<i class='fab fa-2x fa-github'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Reddit"
+    url = "https://www.reddit.com/r/openage"
+    pre = "<i class='fab fa-2x fa-reddit'></i>"
+
+[[menu.topbar]]
+    weight = 3
+    name = "Youtube"
+    url = "https://www.youtube.com/channel/UCSdOD_0-01STR6zRdfuw4vQ"
+    pre = "<i class='fab fa-2x fa-youtube'></i>"
+
+
+
+#[[menu.topbar]]
+#    weight = 4
+#    name = "Email"
+#    url = "mailto:your@email.com"
+#    pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "the openage authors"
+    defaultKeywords = ["gamedev", "opensource", "aoe", "ageofempires", "free", "engine", "c++", "development"]
+    mainSections = ["blog"]
+    defaultDescription = "A free (as in freedom) clone of the Age of Empires II engine"
+
+    # Social media
+    default_sharing_image = "img/screenshots/openage_2.png"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet, grey
+    style = "grey"
+
+    # about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+
+    copyright = "Copyright (c) 2013 - 2019, the openage authors; all rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/logos/logo.svg"
+    logo_small = "img/logos/logo.svg"
+
+[Permalinks]
+    # blog = "/blog/:year/:month/:day/:filename/"
+    blog = "/blog/:filename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+# Do not deactivate for github and reddit link on top right
+    enable = true
+#    text = """<p class="hidden-sm hidden-xs">Contact us on Matrix: #sfttech:matrix.org</p>
+#      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+#      </p>
+#      """
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+    
+[params.see_more]
+    enable = true
+    icon = "fas fa-hands-helping"
+    title = "Do you want to help?"
+    subtitle = "Check our github repository for more infos."
+    link_url = "/get_involved/"
+    link_text = "Get involved"
+
+[params.supporters]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Thanks to"
+    subtitle = ""
+
+# [params.recent_posts]
+#    enable = true
+#    title = "From our blog"
+#    subtitle = ""
+
+# Privacy (GDPR compliancy)
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

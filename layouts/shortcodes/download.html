@@ -1,0 +1,129 @@
+{{ $arg := .Get 0 }}
+{{ if gt (len .Site.Data.pages.download_page) 0 }}
+{{ $features_per_row := (default 3 .Site.Params.pages.download_page.per_row) }}
+<div id="content">
+    <section class="">
+        <div class="container">
+            {{ range $index, $element := sort .Site.Data.pages.download_page "weight" }}
+            {{ if eq (mod $index 3) 0 }}
+            <div class="col-md-12">
+                <div class="row">
+                    {{ end }}
+                    <div class="col-md-4 single-feature-box">
+                        <div class="box-simple background-gray">
+                            {{ with $element }}
+                            <!-- TODO: Add src path with BaseURL instead of ../ -->
+                            <img src="../{{ .icon }}" height="100px" width="auto"></img>
+
+                            <h3>{{ .name | markdownify }}</h3>
+                            <p>{{ .description | markdownify }}</p>
+
+                            {{- if eq (.platform) "win" -}}
+                            <!-- Windows Nightly builds -->
+                            {{ if eq (.tag) "nightly" }}
+                            <p class="text-center">
+                            <table class="download-table">
+                                <thead>
+                                <tr>
+                                    <th colspan="2" class="text-center dl-header">Installer</th>
+                                    <th colspan="2" class="text-center dl-header">Portable</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a class="download-button" href="{{ .url }}" target="_blank">
+                                            {{ .url_name }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                    <a class="sig-download-button" href="{{ .sig_url }}" target="_blank">
+                                            SIG
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a class="download-button" href="{{ .url2 }}" target="_blank">
+                                            {{ .url2_name }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                   <a class="sig-download-button" href="{{ .sig_url2 }}" target="_blank">
+                                            SIG
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a class="download-button" href="{{ .url3 }}" target="_blank">
+                                            {{ .url3_name }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a class="sig-download-button" href="{{ .sig_url3 }}" target="_blank">
+                                            SIG
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a class="download-button" href="{{ .url4 }}" target="_blank">
+                                            {{ .url4_name }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a class="sig-download-button" href="{{ .sig_url4 }}" target="_blank">
+                                            SIG
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </p>
+                            {{ end }}
+
+                            <!-- end Windows Nightly builds -->
+
+                            {{- end -}}
+                            <!-- end Windows platform -->
+
+                            <!-- Source code -->
+                            {{ if eq (.tag) "source" }}
+                            <p class="text-center">
+                                <a class="download-button" href="{{ .url }}" target="_blank">
+                                    {{ .url_name }}
+                                </a>
+
+
+                                {{ if gt (len .url2) 0 }}
+
+                                <a class="download-button" href="{{ .url2 }}" target="_blank">
+                                    {{ .url2_name }}
+                                </a>
+                                {{ end }}
+
+                            </p>
+                            {{ end }}
+                            <!-- end source code -->
+
+                            <!-- PGP key -->
+                            {{ if eq (.tag) "signature" }}
+                            <p class="text-center">
+                                <a class="download-button" href="{{ .url }}" target="_blank">
+                                    {{ .url_name }}
+                                </a>
+
+                            </p>
+                            {{ end }}
+                            <!-- end pgp key -->
+
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.pages.download_page) 1 )) }}
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }} {{ partial "breadcrumbs.html" . }} {{ if or .Params.header.image .Params.header.carousel }} {{ partial "header_image.html" . }} {{ else }}
+{{ end }}
+{{ if isset .Params "id" }} {{ partial .Params.id . }} {{ else }} {{ if .Params.custom_partials.begin }} {{ partial .Params.custom_partials.begin . }} {{ end }}
+<div id="content">
+    <div class="container">
+        {{ .Content }}
+        {{ if .Params.custom_partials.end }} {{ partial .Params.custom_partials.end . }} {{ end }} {{ end }}
+    </div>
+</div>
+{{ partial "landingpage-extra/footer_openage.html" . }}
+{{ partial "footer.html" . }}
+{{ partial "scripts.html" . }}

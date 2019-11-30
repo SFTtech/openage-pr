@@ -1,0 +1,150 @@
+<header class="navbar-affixed-top" data-offset-top="62" data-spy="affix">
+
+    <div class="navbar navbar-default yamm" id="navbar" role="navigation">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="{{ .Site.BaseURL }}">
+                    <img alt="{{ .Title }} logo" class="hidden-xs hidden-sm"
+                         height="52px" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" width="auto">
+                    <img alt="{{ .Title }} logo" class="visible-xs visible-sm"
+                         height="52px" src="{{ .Site.BaseURL }}{{ .Site.Params.logo_small }}" width="auto">
+                    <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button class="navbar-toggle btn-template-main" data-target="#navigation" data-toggle="collapse"
+                            type="button">
+                        <span class="sr-only">{{ i18n "navToggle" }}</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            <!--/.navbar-header -->
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    {{ range .Site.Menus.main.ByWeight }}
+                    {{ if .HasChildren }}
+                    <!-- Check if the first child marks a menu section identifier -->
+                    {{ $hasSections := (hasPrefix (index .Children 0).Identifier "section.") }}
+                    <li class="dropdown{{ if $hasSections }} use-yamm yamm-fw{{end}}">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#"
+                           role="button">{{ .Name }} <span class="caret"></span></a>
+                        {{ if $hasSections }}
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        {{ if ne .URL "" }}
+                                        <div class="col-sm-6">
+                                            <img class="img-responsive hidden-xs" src="{{ .URL }}"/>
+                                        </div>
+                                        {{ end }}
+                                        <div class="col-sm-3">
+                                            {{ range .Children.ByWeight }}
+                                            {{ $column := printf "%s" .Post }}
+                                            {{ if eq $column "1" }}
+                                            <h5>{{ .Name }}</h5>
+                                            {{ if .HasChildren }}
+                                            <ul>
+                                                {{ range .Children.ByWeight }}
+                                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                                {{ end }}
+                                            </ul>
+                                            {{ end }}
+                                            {{ end }}
+                                            {{ end }}
+                                        </div>
+                                        <div class="col-sm-3">
+                                            {{ range .Children.ByWeight }}
+                                            {{ $column := printf "%s" .Post }}
+                                            {{ if eq $column "2" }}
+                                            <h5>{{ .Name }}</code></h5>
+                                            {{ if .HasChildren }}
+                                            <ul>
+                                                {{ range .Children.ByWeight }}
+                                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                                {{ end }}
+                                            </ul>
+                                            {{ end }}
+                                            {{ end }}
+                                            {{ end }}
+                                        </div>
+                                        {{ if eq .URL "" }}
+                                        <div class="col-sm-3">
+                                            {{ range .Children }}
+                                            {{ $column := printf "%s" .Post }}
+                                            {{ if eq $column "3" }}
+                                            <h5>{{ .Name }}</code></h5>
+                                            {{ if .HasChildren }}
+                                            <ul>
+                                                {{ range .Children.ByWeight }}
+                                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                                {{ end }}
+                                            </ul>
+                                            {{ end }}
+                                            {{ end }}
+                                            {{ end }}
+                                        </div>
+                                        <div class="col-sm-3">
+                                            {{ range .Children }}
+                                            {{ $column := printf "%s" .Post }}
+                                            {{ if eq $column "4" }}
+                                            <h5>{{ .Name }}</code></h5>
+                                            {{ if .HasChildren }}
+                                            <ul>
+                                                {{ range .Children.ByWeight }}
+                                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                                {{ end }}
+                                            </ul>
+                                            {{ end }}
+                                            {{ end }}
+                                            {{ end }}
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        {{ else }}
+                        <ul class="dropdown-menu">
+                            {{ range .Children.ByWeight }}
+                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </li>
+                    {{ else }}
+                    <li class="dropdown">
+                        <a href="{{ .URL }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Search" type="text">
+                        <span class="input-group-btn">
+
+                            <button class="btn btn-template-main" type="submit"><i class="fas fa-search"></i></button>
+
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+            <!--/.nav-collapse -->
+
+        </div>
+    </div>
+
+</header>
+
+<!-- *** NAVBAR END ***-->
