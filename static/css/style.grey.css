@@ -3971,13 +3971,13 @@ body {
 }
 
 a {
-    color: #7e7e7e;
+    color: #554f4f;
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: #633736;
+    color: #000;
     text-decoration: underline;
 }
 

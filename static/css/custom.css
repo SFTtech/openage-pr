@@ -411,5 +411,19 @@ a.sig-download-button {
 }
 
 .box-simple {
-    min-height: 230px;
+    min-height: 50px;
+}
+
+.bar {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.dlbtn-template-transparent-black:hover, .dlbtn-template-transparent-black:focus, .dlbtn-template-transparent-black:active, .dlbtn-template-transparent-black.active {
+    background: 
+#fff;
+color:
+#000;
+border-color:
+    #fff;
 }

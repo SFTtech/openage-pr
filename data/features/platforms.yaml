@@ -2,4 +2,4 @@ weight: 0
 name: "Platform independent "
 icon:  ""
 url: ""
-description: "TODO: Works natively on GNU/Linux, BSD, macOS and Windows. We have ready-to-use packages in [Download](/download/) TODO"
+description: "openage works natively on GNU/Linux, BSD, macOS and Windows. While primarily aimed at POSIX platforms, we also have ready-to-use packages in our [Download](download/) section."

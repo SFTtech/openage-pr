@@ -2,4 +2,4 @@ weight: 5
 name: "Easy Modding"
 icon: ""
 url: ""
-description: "TODO: It's easy to mod with its' Modding API and own [mod-database](https://openage.mod.io)! Here you can [learn](TODO)"
+description: "That is achieved by making use of a well-designed Modding API and readily accessible [mod-repository](https://openage.mod.io)! Here you can [getting started](https://doc.openage.sft.mx/sphinx/.bin/openage-modding-external/source/tutorials/nyan/getting_started.html) and take a look how to use [nyan](https://github.com/sfttech/nyan)."

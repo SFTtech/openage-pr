@@ -1,5 +1,5 @@
 weight: 4
-name: "performance"
-icon: "fas fa-globe"
+name: "High performance"
+icon: ""
 url: ""
-description: "TODO: Highly efficient and cross-platform graphics rendering with Vulkan. custom renderer"
+description: "We use highly efficient and cross-platform graphics rendering with Vulkan. openage supports multithreading and multiprocessing to maximize the utilization of your hardware."
