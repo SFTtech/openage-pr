@@ -90,19 +90,19 @@ paginate = 5
     weight = 1
     name = "GitHub"
     url = "https://github.com/SFTtech/openage"
-    pre = "<i class='fab fa-2x fa-github'></i>"
+    pre = '<img src="icons/github-brands.svg" />'
 
 [[menu.topbar]]
     weight = 2
     name = "Reddit"
     url = "https://www.reddit.com/r/openage"
-    pre = "<i class='fab fa-2x fa-reddit'></i>"
+    pre = '<img src="icons/reddit-brands.svg" />'
 
 [[menu.topbar]]
     weight = 3
     name = "Youtube"
     url = "https://www.youtube.com/channel/UCSdOD_0-01STR6zRdfuw4vQ"
-    pre = "<i class='fab fa-2x fa-youtube'></i>"
+    pre = '<img src="icons/youtube-brands.svg" />'
 
 
 
@@ -168,7 +168,7 @@ paginate = 5
     
 [params.see_more]
     enable = true
-    icon = "fas fa-hands-helping"
+    icon = ""
     title = "Do you want to contribute?"
     subtitle = "See here in which ways you can ..."
     link_url = "get_involved/"
