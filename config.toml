@@ -125,9 +125,9 @@ paginate = 5
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet, grey
     style = "grey"
 
-    # about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+    # about_us = "<p>...</p>"
 
-    copyright = "Copyright (c) 2013 - 2019, the openage authors; all rights reserved."
+    copyright = "Copyright © 2013 - 2019, the openage authors; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
@@ -150,9 +150,9 @@ paginate = 5
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
-    categories = true
-    tags = true
-    search = true
+#    categories = true
+#    tags = true
+#    search = true
 
 [params.carousel]
     enable = true
@@ -169,9 +169,9 @@ paginate = 5
 [params.see_more]
     enable = true
     icon = "fas fa-hands-helping"
-    title = "Do you want to help?"
-    subtitle = "Check our github repository for more infos."
-    link_url = "/get_involved/"
+    title = "Do you want to contribute?"
+    subtitle = "See here in which ways you can ..."
+    link_url = "get_involved/"
     link_text = "Get involved"
 
 [params.supporters]
