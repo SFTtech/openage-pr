@@ -5,105 +5,39 @@
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="viewport" content="width=640" />
 
-        <link rel="stylesheet" href="web/stylesheets/core.css" media="screen"/>
-        <link rel="stylesheet" href="web/stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-        <link rel="stylesheet" href="web/stylesheets/pygment_trac.css"/>
-
+        <link rel="stylesheet" href="web/stylesheets/main.css"/>
         <title>openage - free strategy game engine</title>
     </head>
 
     <body>
-        <a id="forkme_banner" href="https://github.com/SFTtech/openage">View on GitHub</a>
-        <div class="shell">
-
-            <header>
-                <span class="ribbon-outer">
-                    <span class="ribbon-inner">
-                        <h1><img src="pics/openage.svg" alt="openage" height="100em" class="contentpic"/></h1>
-                        <h2>A free (as in freedom) clone of the Age of Empires II engine</h2>
-                    </span>
-                    <span class="left-tail"></span>
-                    <span class="right-tail"></span>
-                </span>
-            </header>
-
-            <section id="downloads">
-                <span class="inner">
-                    <a href="https://github.com/SFTtech/openage" class="code"><em>view 'n' contribute to</em> code</a>
-                    <a href="https://github.com/SFTtech/openage/tarball/master" class="tgz"><em>download</em> .tar.gz</a>
-                </span>
-            </section>
-
-
-            <span class="banner-fix"></span>
-
-
-            <section id="main_content">
-
+        <video id="backvid" poster="pics/openagevideostill.png" autoplay muted loop>
+            <source src="pics/openagevideo.mp4" type="video/mp4">
+        </video>
+        <div id="darken"></div>
+        <div id="main">
+            <div id="left">
+                <img src="pics/openageinverse.svg" alt="openage" id="logo">
+                <h1>A free (as in <i>freedom</i>) clone of the Age of Empires II engine</h1>
+                <div id="mainbuttons">
+                    <a href="https://github.com/SFTtech/openage" class="code" id="button">View the Code</a>
+                    <a href="https://github.com/SFTtech/openage/tarball/master" class="tgz" id="button">Download .tar.gz</a>
+                </div>
+            </div>
+            <div id="rightcontainer"><div id="right">
                 <p>You know Age of Empires. You know its bugs. You know the fun playing it.</p>
-
-                <p>
-                    <a href="pics/openage_2.png">
-                        <img src="pics/openage_2.png" alt="epic picture here" class="contentpic"/>
-                    </a>
-                </p>
-
-                <span class="link-container">
-                    <span class="link-distribute">
-                        <a href="https://blog.openage.sft.mx">Blog</a>
-                        <a href="https://github.com/SFTtech/openage">Code</a>
-                        <a href="https://github.com/SFTtech/openage/blob/master/doc/status.md">Feature list</a>
-                        <a href="https://github.com/SFTtech/openage/blob/master/doc/building.md">Build and install</a>
-                    </span>
-                </span>
-
-                <p>
-                    We are creating a free (as in freedom) clone of the Age of Empires II engine in C++17 from scratch (GPLv3+).
-                    We use "modern" technologies like OpenGL/GLSL, Python, Qt5, CMake, ...
-                </p>
-
-                <p>
-                    We aim to create an exact clone (for now), using the original media files.
-                </p>
-
-                <p>
-                    This allows people using <b>GNU/Linux</b>, <b>BSD</b>, <b>macOS</b> or <b>Windows</b> to play the game
-                    natively, minus features, plus additional epic bugs (or was it vice versa?).
-                </p>
-
-                <p>
-                    The project is run by volunteers:<br/>
-                    Students and professionals from all over the world.<br/>
-                    Join us and help to create an awesome game!
-                </p>
-
-                <p class="contact-intro">
-                   Get in touch:
-                </p>
-
-                <ul>
-                    <li><strong>Matrix</strong>: <a href="https://riot.im/app/#/room/#sfttech:matrix.org">#sfttech:matrix.org</a></li>
-                    <li><strong>IRC</strong>: <a href="https://webchat.freenode.net/?channels=sfttech">#sfttech on freenode.org</a></li>
-                    <li><strong>Reddit</strong>: <a href="https://reddit.com/r/openage">/r/openage</a></li>
-                    <li><strong>Money sink</strong>: <a href="https://liberapay.com/SFTtech">liberapay/SFTtech</a></li>
-                </ul>
-            </section>
-
-            <footer>
-                <span class="ribbon-outer">
-                    <span class="ribbon-inner">
-                        <p>
-                            This project is brought to you by <a href="https://github.com/SFTtech">SFTtech</a>
-                        </p>
-                    </span>
-                    <span class="left-tail"></span>
-                    <span class="right-tail"></span>
-                </span>
-                <a href="https://github.com/SFTtech/openage"><span class="octocat"></span></a>
-                <p>
-                    <a class="source-link" href="https://github.com/SFTtech/openage-pr">Site Source Code</a>
-                </p>
-            </footer>
+                <p>We are creating a free (as in freedom) clone of the Age of Empires II engine in C++17 from scratch (GPLv3+). We use "modern" technologies like OpenGL/GLSL, Python, Qt5, CMake, ...</p>
+                <p>We aim to create an exact clone (for now), using the original media files.</p>
+                <p>This allows people using GNU/Linux, BSD, macOS or Windows to play the game natively, minus features, plus additional epic bugs (or was it vice versa?).</p>
+                <p>The project is run by volunteers: Students and professionals from all over the world.</p>
+                <p>Join us and help to create an awesome game!</p>
+                <div id="otherbuttons">
+                    <a href="https://blog.openage.sft.mx" id="button">Blog</a>
+                    <a href="https://github.com/SFTtech/openage/blob/master/doc/status.md" id="button">Feature list</a>
+                    <a href="https://github.com/SFTtech/openage/blob/master/doc/building.md" id="button">Build and install</a>
+                </div>
+                <p id="touch">Get in touch in our <a href="https://riot.im/app/#/room/#sfttech:matrix.org">Matrix </a>, <a href="https://webchat.freenode.net/#sfttech">IRC </a>, <a href="https://www.reddit.com/r/openage/">subreddit </a>or consider a <a href="https://liberapay.com/SFTtech">donation </a>&#60;3</p>
+            </div></div>
         </div>
+        <p id="end">Brought to you by <a href="https://github.com/SFTtech/">SFTtech</a>. <a href="https://github.com/SFTtech/openage-pr">Website source</a></p>
     </body>
 </html>
