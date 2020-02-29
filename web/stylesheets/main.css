@@ -1,7 +1,7 @@
 /* background from https://redstapler.co/responsive-css-video-background/ */
 
 @font-face {
-    font-family: 'OpenSans-Light'; 
+    font-family: 'OpenSans-Light';
     src: url('../fonts/opensans-light.ttf') format("truetype"),
          url('../fonts/opensans-light.woff2') format('woff2'),
          url('../fonts/opensans-light.woff') format('woff');
@@ -30,7 +30,7 @@ html,body {
     }
 }
 @media (max-aspect-ratio: 16/9) {
-    #backvid { 
+    #backvid {
         width:auto;
         height: 100%;
     }
@@ -88,7 +88,7 @@ a, a:visited{
     display: flex;
     flex-direction:row;
     width: 50vh;
-    margin-left: 7vw;
+    margin-left: 3vw;
     margin-top: 3vh;
 }
 
