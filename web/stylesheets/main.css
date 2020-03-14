@@ -59,21 +59,25 @@ html,body {
     flex-direction: row;
 }
 
-#logo{
-    margin-top: 30vh;
-    margin-left: 7vw;
-    height: 20vh;
+#leftcontainer{
     z-index: 1;
 }
 
 #left{
+    margin-top: 30vh;
+    margin-left: 5vw;
+}
+
+#logo{
+    margin-top: 1vh;
+    width: 45vw;
     z-index: 1;
 }
 
 h1{
-    font-size: 2.6vh;
-    margin-left: 8vw;
-    width:88vh;
+    font-size: 1.5vw;
+    margin-left: 1vw;
+    width: 45vw;
     color: white;
     z-index: 100;
     padding: 0;
@@ -81,15 +85,13 @@ h1{
 
 a, a:visited{
     color: white;
-
 }
 
 #mainbuttons{
     display: flex;
     flex-direction:row;
-    width: 50vh;
-    margin-left: 3vw;
-    margin-top: 3vh;
+    width: 35vw;
+    margin-top: 2vh;
 }
 
 #button, #button:visited{
@@ -106,8 +108,8 @@ a, a:visited{
 }
 
 #mainbuttons #button{
-    font-size: 2vh;
-    margin-left: 11vh;
+    font-size: 1.0vw;
+    margin-left: 5vw;
 }
 
 #rightcontainer{
@@ -115,12 +117,12 @@ a, a:visited{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 10vh;
-    min-width: 10vw;
+    margin-right: 6vh;
+    min-width: 8vw;
 }
 
 #right p{
-    font-size: 2vh;
+    font-size: 2.3vh;
     text-align: justify;
     color: gainsboro;
 }
@@ -146,6 +148,7 @@ a, a:visited{
 }
 
 #end{
+    font-size: 2.2vh;
     bottom: 0;
     right: 0;
     margin-bottom: 1vh;
@@ -154,11 +157,20 @@ a, a:visited{
     color: gainsboro;
 }
 
-@media (max-aspect-ratio: 7/5){
+p.indented{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media (max-aspect-ratio: 14/10){
     #main{
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    #left{
+        margin-top: 0px;
+        margin-left: 0px;
     }
     #logo{
         margin-top: 20vh;
@@ -168,8 +180,7 @@ a, a:visited{
         z-index: 1;
     }
     h1{
-        font-size: 3vw;
-        margin-left: 0;
+        font-size: 3.0vw;
         text-align: center;
         width:initial;
     }
@@ -183,13 +194,13 @@ a, a:visited{
     }
 
     #mainbuttons #button{
-        font-size: 3vw;
+        font-size: 2.2vw;
         margin-left: 1vh;
         margin-right: 1vh;
     }
 
     #rightcontainer{
-        margin-top: 20vh;
+        margin-top: 5vh;
         height: initial;
         display: flex;
         flex-direction: column;
@@ -210,16 +221,21 @@ a, a:visited{
     }
 
     #otherbuttons #button,#otherbuttons #button:visited{
-        font-size: 3vw;
+        font-size: 2.1vw;
         border: 0.1vh solid gainsboro;
         margin-left: 2vw;
         margin-right: 2vw;
     }
     #end{
+        font-size: 2.1vh;
         margin-bottom: 1vh;
         margin-right: 2vw;
-        margin-top: 2vh;
+        margin-top: 4vh;
         position: initial;
-        text-align: right;
+        text-align: center;
+    }
+    p.indented{
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
